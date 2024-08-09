@@ -31,6 +31,10 @@ public protocol DataLogic {
     /// - Returns: Array of `Event`
     func fetchEvents() async -> [Event]
 
+    /// Fetches the default setup of the packing items.
+    /// - Returns: Array of `PackingItem`
+    func fetchPackingListItemsFromFirebase() async -> [PackingItem]
+
     /// Fetches the FAQ items
     /// - Returns: Array of `FAQItem`
     func fetchFAQItems() async -> [FAQItem]
