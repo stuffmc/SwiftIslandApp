@@ -149,8 +149,12 @@ private extension SectionAtTheConferenceNotActivated {
             switch authorization {
             case .notDetermined, .restricted, .denied:
                 actionStatus = .failed
-            case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            case .authorizedAlways, .authorizedWhenInUse:
                 getLocation()
+#if os(macOS)
+            case .authorized:
+                getLocation()
+#endif
             default:
                 actionStatus = .failed
             }
