@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct PlaceAnnotationView: View {
     @State private var showTitle = false

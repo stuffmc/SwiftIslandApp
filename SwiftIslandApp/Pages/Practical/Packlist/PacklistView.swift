@@ -5,7 +5,11 @@
 
 import SwiftUI
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct PacklistView: View {
     @Namespace private var namespace

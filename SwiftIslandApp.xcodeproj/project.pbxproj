@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */; };
+		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
+		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
+		0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
+		0CFF765E2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
 		2A090BD72A71B0E9003553D2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A090BD62A71B0E9003553D2 /* MapView.swift */; };
 		2A090BD92A71BAFF003553D2 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A090BD82A71BAFF003553D2 /* PlaceAnnotationView.swift */; };
 		2A16EB362A4CDA4200CC881D /* ConferenceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A16EB352A4CDA4200CC881D /* ConferenceHeaderView.swift */; };
@@ -23,7 +28,7 @@
 		2A37FB6A2A7B06AE0062E63A /* ConferenceBoxMentors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37FB692A7B06AE0062E63A /* ConferenceBoxMentors.swift */; };
 		2A37FB902A7C14CB0062E63A /* UIDevice+HasNotch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37FB8F2A7C14CB0062E63A /* UIDevice+HasNotch.swift */; };
 		2A37FB9A2A7D3F890062E63A /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37FB992A7D3F890062E63A /* Bundle+Version.swift */; };
-		2A3AB6592A7871030089CF7E /* SwiftIslandDataLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A3AB6582A7871030089CF7E /* SwiftIslandDataLogic */; };
+		2A3AB6592A7871030089CF7E /* SwiftIslandDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 2A3AB6582A7871030089CF7E /* SwiftIslandDataLogic */; };
 		2A3AB65B2A78744B0089CF7E /* ActivityType+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AB65A2A78744B0089CF7E /* ActivityType+Color.swift */; };
 		2A77AD8E2C0527AE00610250 /* AckGen in Frameworks */ = {isa = PBXBuildFile; productRef = 2A77AD8D2C0527AE00610250 /* AckGen */; };
 		2A77AD902C0527AE00610250 /* AckGenUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2A77AD8F2C0527AE00610250 /* AckGenUI */; };
@@ -140,6 +145,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandLocalDataLogic; sourceTree = "<group>"; };
+		0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandDataLogic; sourceTree = "<group>"; };
 		2A090BD62A71B0E9003553D2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2A090BD82A71BAFF003553D2 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		2A16EB352A4CDA4200CC881D /* ConferenceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceHeaderView.swift; sourceTree = "<group>"; };
@@ -157,7 +164,6 @@
 		2A37FB692A7B06AE0062E63A /* ConferenceBoxMentors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceBoxMentors.swift; sourceTree = "<group>"; };
 		2A37FB8F2A7C14CB0062E63A /* UIDevice+HasNotch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+HasNotch.swift"; sourceTree = "<group>"; };
 		2A37FB992A7D3F890062E63A /* Bundle+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
-		2A3AB6562A7870C80089CF7E /* SwiftIslandDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandDataLogic; sourceTree = "<group>"; };
 		2A3AB65A2A78744B0089CF7E /* ActivityType+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityType+Color.swift"; sourceTree = "<group>"; };
 		2A542B9C2AA0C4F500E8C0C8 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		2A659B132BFFE2B100A57501 /* SwiftIslandApp-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SwiftIslandApp-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7F128B2A69CB2C007C28EA /* Defaults in Frameworks */,
+				0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */,
 				2A3AB6592A7871030089CF7E /* SwiftIslandDataLogic in Frameworks */,
 				2A77AD8E2C0527AE00610250 /* AckGen in Frameworks */,
 				2A77AD902C0527AE00610250 /* AckGenUI in Frameworks */,
@@ -363,7 +370,8 @@
 		2A3AB6552A7870C80089CF7E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2A3AB6562A7870C80089CF7E /* SwiftIslandDataLogic */,
+				0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */,
+				0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -749,6 +757,7 @@
 				2A3AB6582A7871030089CF7E /* SwiftIslandDataLogic */,
 				2A77AD8D2C0527AE00610250 /* AckGen */,
 				2A77AD8F2C0527AE00610250 /* AckGenUI */,
+				0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */,
 			);
 			productName = SwiftIsland;
 			productReference = 2AEDC4932A4A030F00CD0180 /* Swift Island.app */;
@@ -827,6 +836,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */,
+				0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */,
 				2A987AD32A7AE4B000EE15DF /* Assets.xcassets in Resources */,
 				2A987AF32A7AEA9800EE15DF /* GoogleService-Info.plist in Resources */,
 			);
@@ -852,6 +863,8 @@
 				B35057F12A9DD19700B71436 /* elements.pdf in Resources */,
 				B35057F92A9DD23C00B71436 /* farmers-wedding.pdf in Resources */,
 				2A16EB3C2A4CDB3600CC881D /* WorkSans-Bold.ttf in Resources */,
+				0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */,
+				0CFF765E2C6661A100CC648D /* SwiftIslandDataLogic in Resources */,
 				B332ADF92A9A813C00557AA7 /* valuta.pdf in Resources */,
 				B35057FB2A9DD24400B71436 /* mystery-museum.pdf in Resources */,
 				B35057F52A9DD20800B71436 /* safe.pdf in Resources */,
@@ -1216,12 +1229,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app;
 				PRODUCT_NAME = "Swift Island";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,7";
 			};
 			name = Debug;
 		};
@@ -1259,12 +1272,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app;
 				PRODUCT_NAME = "Swift Island";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,7";
 			};
 			name = Release;
 		};
@@ -1379,6 +1392,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftIslandLocalDataLogic;
+		};
 		2A3AB6582A7871030089CF7E /* SwiftIslandDataLogic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftIslandDataLogic;

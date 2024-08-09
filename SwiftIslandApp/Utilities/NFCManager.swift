@@ -3,6 +3,7 @@
 // Copyright © 2023 AppTrix AB. All rights reserved.
 //
 
+#if !os(visionOS)
 import Foundation
 import CoreNFC
 
@@ -11,3 +12,4 @@ enum NFCManager {
         NFCNDEFReaderSession.readingAvailable
     }
 }
+#endif

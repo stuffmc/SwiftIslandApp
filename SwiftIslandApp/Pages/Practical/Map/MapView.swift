@@ -5,7 +5,11 @@
 
 import SwiftUI
 import MapKit
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct MapView: View {
     @EnvironmentObject private var appDataModel: AppDataModel

@@ -4,7 +4,11 @@
 //
 
 import WidgetKit
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct UpNextEntry: TimelineEntry {
     let date: Date

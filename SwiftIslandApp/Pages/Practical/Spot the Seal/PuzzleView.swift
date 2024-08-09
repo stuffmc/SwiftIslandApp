@@ -6,7 +6,11 @@
 import SwiftUI
 import PDFKit
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct Hint: Decodable, Encodable {
     let text: String

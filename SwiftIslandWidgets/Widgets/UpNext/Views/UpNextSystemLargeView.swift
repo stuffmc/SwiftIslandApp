@@ -4,7 +4,11 @@
 //
 import SwiftUI
 import WidgetKit
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct UpNextSystemLargeView: View {
     var entry: UpNextProvider.Entry

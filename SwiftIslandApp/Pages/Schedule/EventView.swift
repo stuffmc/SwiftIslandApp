@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct EventView: View {
     let event: Event

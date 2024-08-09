@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct ConferencePageView: View {
     var namespace: Namespace.ID

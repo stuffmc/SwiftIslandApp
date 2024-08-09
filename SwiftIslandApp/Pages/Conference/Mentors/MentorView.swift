@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct MentorView: View {
     var namespace: Namespace.ID

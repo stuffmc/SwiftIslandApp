@@ -6,6 +6,11 @@
 import SwiftUI
 
 struct SourceView: View {
+#if os(visionOS)
+    private let width = 1000.0
+#else
+    private let width = UIScreen.main.bounds.width
+#endif
     var body: some View {
         ZStack {
             LinearGradient.defaultBackground
@@ -28,7 +33,7 @@ struct SourceView: View {
                             .mask {
                                 Circle()
                             }
-                            .frame(maxWidth: UIScreen.main.bounds.width / 2, maxHeight: UIScreen.main.bounds.width / 2)
+                            .frame(maxWidth: width / 2, maxHeight: width / 2)
                         .padding(0)
                         HStack {
                             Spacer()

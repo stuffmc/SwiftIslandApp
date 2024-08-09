@@ -5,7 +5,11 @@
 
 import SwiftUI
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 extension Defaults.Keys {
     static let puzzleStatus = Key<[String: PuzzleState]>("puzzleStatus", default: [:])

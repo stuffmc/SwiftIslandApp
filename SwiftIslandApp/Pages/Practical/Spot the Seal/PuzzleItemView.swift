@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 let sealAngle: Double = 24
 let fromAngle: Double = -45 - sealAngle

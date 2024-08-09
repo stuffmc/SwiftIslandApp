@@ -4,7 +4,11 @@
 //
 
 import XCTest
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 @testable import Swift_Island
 
 let ticketJSON = """

@@ -4,7 +4,11 @@
 //
 
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 extension Defaults.Keys {
     static let isPacklistSetupFor2024 = Key<Bool>("isPacklistSetupFor2024", default: false)

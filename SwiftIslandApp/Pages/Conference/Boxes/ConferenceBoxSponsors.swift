@@ -4,7 +4,11 @@
 //
 
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct ConferenceBoxSponsors: View {
     @EnvironmentObject private var appDataModel: AppDataModel

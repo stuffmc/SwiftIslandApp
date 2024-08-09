@@ -7,7 +7,15 @@ import Foundation
 import os.log
 import SwiftUI
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
+#endif
 import WeatherKit
 import CoreLocation
 

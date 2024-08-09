@@ -6,7 +6,11 @@
 import SwiftUI
 import CoreLocation
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 import AckGenUI
 
 // MARK: - Main page

@@ -5,7 +5,11 @@
 
 import WidgetKit
 import SwiftUI
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 struct UpNextProvider: TimelineProvider {
     let dataLogic = SwiftIslandDataLogic()

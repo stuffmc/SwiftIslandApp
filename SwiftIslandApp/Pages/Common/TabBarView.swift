@@ -5,7 +5,11 @@
 
 import SwiftUI
 import Defaults
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
 import SwiftIslandDataLogic
+#endif
 
 private enum Tab: CaseIterable {
     case home
