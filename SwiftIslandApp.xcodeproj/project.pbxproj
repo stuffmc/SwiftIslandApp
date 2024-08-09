@@ -49,7 +49,7 @@
 		2A987AC92A7AE4AF00EE15DF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A987AC82A7AE4AF00EE15DF /* SwiftUI.framework */; };
 		2A987ACC2A7AE4AF00EE15DF /* SwiftIslandWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987ACB2A7AE4AF00EE15DF /* SwiftIslandWidgetsBundle.swift */; };
 		2A987AD32A7AE4B000EE15DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A987AD22A7AE4B000EE15DF /* Assets.xcassets */; };
-		2A987ADA2A7AE4B000EE15DF /* SwiftIslandWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2A987AC52A7AE4AF00EE15DF /* SwiftIslandWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A987ADA2A7AE4B000EE15DF /* SwiftIslandWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2A987AC52A7AE4AF00EE15DF /* SwiftIslandWidgetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A987AEC2A7AEA1900EE15DF /* UpNextEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987AEA2A7AE76A00EE15DF /* UpNextEntry.swift */; };
 		2A987AED2A7AEA1F00EE15DF /* UpNextSystemMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987AE72A7AE70400EE15DF /* UpNextSystemMediumView.swift */; };
 		2A987AEE2A7AEA1F00EE15DF /* UpNextWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987AE02A7AE51C00EE15DF /* UpNextWidget.swift */; };
@@ -1000,6 +1000,7 @@
 /* Begin PBXTargetDependency section */
 		2A987AD82A7AE4B000EE15DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2A987AC42A7AE4AF00EE15DF /* SwiftIslandWidgetsExtension */;
 			targetProxy = 2A987AD72A7AE4B000EE15DF /* PBXContainerItemProxy */;
 		};
