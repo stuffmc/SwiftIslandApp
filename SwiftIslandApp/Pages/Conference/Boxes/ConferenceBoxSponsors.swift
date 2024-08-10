@@ -42,6 +42,7 @@ struct ConferenceBoxSponsors: View {
                                 Text(sponsor.title).font(.callout).foregroundColor(.primary)
                             }
                         }
+                        .buttonStyle(.plain)
                     }
                 }
                 if let content = sponsors.content {
@@ -61,6 +62,7 @@ struct ConferenceBoxSponsors: View {
                                     Text(sponsor.title).font(.callout).foregroundColor(.primary)
                                 }.padding(.horizontal, 40)
                             }
+                            .buttonStyle(.plain)
                         }
                     }
                 } else {

@@ -21,9 +21,11 @@ struct ConferenceBoxTicket: View {
                 .onTapGesture {
                     UIApplication.shared.open(URL(string: "https://ti.to/swiftisland/2024")!) // swiftlint:disable:this force_unwrapping
                 }
+            #if os(visionOS)
                 .hoverEffect { effect, isActive, _ in
                     effect.scaleEffect(isActive ? 1.2 : 1)
                 }
+            #endif
         }
         .mask {
             RoundedRectangle(cornerRadius: 10, style: .continuous)

@@ -57,14 +57,13 @@ struct ConferenceBoxWeather: View {
                     Text(" Weather")
                         .font(.caption.bold())
                         .foregroundColor(.white)
-                    Button(action: {
-                        UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!) // swiftlint:disable:this force_unwrapping
-                    }, label: {
-                        Text("legal")
-                            .font(.caption2)
-                            .foregroundColor(.white.opacity(0.8))
-                            .underline()
-                    })
+                    Text("legal")
+                        .font(.caption2)
+                        .foregroundColor(.white.opacity(0.8))
+                        .underline()
+                        .onTapGesture {
+                            UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!) // swiftlint:disable:this force_unwrapping
+                        }
                 }
                 .frame(maxHeight: .infinity, alignment: .bottomLeading)
                 .padding(10)
@@ -88,4 +87,9 @@ struct ConferenceBoxWeather: View {
             }
         }
     }
+}
+
+#Preview {
+    ConferenceBoxWeather()
+        .padding(50)
 }
