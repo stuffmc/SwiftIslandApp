@@ -15,16 +15,19 @@ struct ConferenceHeaderView: View {
     var body: some View {
         VStack(spacing: 13) {
             if !userIsActivated {
+                // TODO: Ask for a 3D Logo for visionOS (also used for App Icon)
                 Image("Logo")
                 VStack(spacing: 0) {
                     Text("Swift")
                         .font(.custom("WorkSans-Bold", size: 64))
-                        .foregroundColor(.logoText)
                     Text("Island")
                         .font(.custom("WorkSans-Regular", size: 60))
-                        .foregroundColor(.logoText)
                         .offset(CGSize(width: 0, height: -20))
                 }
+#if !os(visionOS)
+                // TODO: Is this really necessary? Can't we just use semantic colors?
+                .foregroundColor(.logoText)
+#endif
             }
             HStack {
                 Spacer()
@@ -54,15 +57,13 @@ struct ConferenceHeaderView: View {
     }
 }
 
-struct ConferenceHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ConferenceHeaderView()
-                .preferredColorScheme(.light)
-                .previewDisplayName("Light mode")
-            ConferenceHeaderView()
-                .preferredColorScheme(.dark)
-                .previewDisplayName("Dark mode")
-        }
-    }
+#Preview("Light / Vision") {
+    ConferenceHeaderView()
+        .preferredColorScheme(.light)
+        .paddedGlassBackgroundEffect() // no-op on non-visionOS Platforms
+}
+
+#Preview("Dark") {
+    ConferenceHeaderView()
+        .preferredColorScheme(.dark)
 }

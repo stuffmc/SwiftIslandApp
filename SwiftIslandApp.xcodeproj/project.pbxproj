@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C14C43D2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */; };
+		0C14C43E2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */; };
 		0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
@@ -145,6 +147,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBackgroundEffect.swift; sourceTree = "<group>"; };
 		0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandLocalDataLogic; sourceTree = "<group>"; };
 		0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandDataLogic; sourceTree = "<group>"; };
 		2A090BD62A71B0E9003553D2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 		2A16EB3D2A4CDB3A00CC881D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */,
 				2A16EB402A4CDD4A00CC881D /* Color+Helper.swift */,
 				2AE440002A702BC0009078E3 /* Date+Formatting.swift */,
 				2A7F12802A64891F007C28EA /* LinearGradient.swift */,
@@ -915,6 +919,7 @@
 				2A987AF92A7AEC4300EE15DF /* LinearGradient.swift in Sources */,
 				2A987AEF2A7AEA1F00EE15DF /* UpNextEntryView.swift in Sources */,
 				2E19CAE02A7EF7B100177B61 /* UpNextSystemRectangularView.swift in Sources */,
+				0C14C43E2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */,
 				2A987AED2A7AEA1F00EE15DF /* UpNextSystemMediumView.swift in Sources */,
 				2E19CAE22A7EFD9800177B61 /* UpNextSystemCircularView.swift in Sources */,
 				2A987ACC2A7AE4AF00EE15DF /* SwiftIslandWidgetsBundle.swift in Sources */,
@@ -936,6 +941,7 @@
 				2A7F12792A640730007C28EA /* ScrollViewOffset.swift in Sources */,
 				2A16EB362A4CDA4200CC881D /* ConferenceHeaderView.swift in Sources */,
 				B3C626442A94956A002754A8 /* TicketEditView.swift in Sources */,
+				0C14C43D2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */,
 				B3F443032A9765E700AFDF43 /* TicketAddButton.swift in Sources */,
 				2A37FB9A2A7D3F890062E63A /* Bundle+Version.swift in Sources */,
 				2AE43FAC2A6B1A8C009078E3 /* View+PercentageOffset.swift in Sources */,
@@ -1025,7 +1031,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PJLC3L3YMP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftIslandWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Swift Island Widgets";
@@ -1036,7 +1042,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "${MARKETING_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carrascomolina.swiftisland.app.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1055,7 +1061,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PJLC3L3YMP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftIslandWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Swift Island Widgets";
@@ -1066,7 +1072,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = "${MARKETING_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app.widgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carrascomolina.swiftisland.app.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1208,7 +1214,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIslandApp/Preview Content\"";
-				DEVELOPMENT_TEAM = V38QRBT6X5;
+				DEVELOPMENT_TEAM = 3J7HNT49HJ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1227,7 +1233,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "${MARKETING_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carrascomolina.swiftisland.app;
 				PRODUCT_NAME = "Swift Island";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
@@ -1251,7 +1257,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftIslandApp/Preview Content\"";
-				DEVELOPMENT_TEAM = V38QRBT6X5;
+				DEVELOPMENT_TEAM = 3J7HNT49HJ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1270,7 +1276,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "${MARKETING_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.swiftisland.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carrascomolina.swiftisland.app;
 				PRODUCT_NAME = "Swift Island";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
