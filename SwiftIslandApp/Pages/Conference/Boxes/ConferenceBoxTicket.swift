@@ -9,19 +9,21 @@ struct ConferenceBoxTicket: View {
     var body: some View {
         ZStack {
             Image("BoxTicketBackground")
-            Button(action: {
-                UIApplication.shared.open(URL(string: "https://ti.to/swiftisland/2024")!) // swiftlint:disable:this force_unwrapping
-            }, label: {
-                Text("Buy Tickets")
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 16)
-                    .font(.custom("WorkSans-Bold", size: 32))
-                    .background {
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(Color.ticketText)
-                    }
-                    .foregroundColor(.white)
-            })
+            Text("Buy Tickets")
+                .padding(.vertical, 8)
+                .padding(.horizontal, 16)
+                .font(.custom("WorkSans-Bold", size: 32))
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(Color.ticketText)
+                }
+                .foregroundColor(.white)
+                .onTapGesture {
+                    UIApplication.shared.open(URL(string: "https://ti.to/swiftisland/2024")!) // swiftlint:disable:this force_unwrapping
+                }
+                .hoverEffect { effect, isActive, _ in
+                    effect.scaleEffect(isActive ? 1.2 : 1)
+                }
         }
         .mask {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -29,8 +31,6 @@ struct ConferenceBoxTicket: View {
     }
 }
 
-struct ConferenceBoxTicker_Previews: PreviewProvider {
-    static var previews: some View {
-        ConferenceBoxTicket()
-    }
+#Preview {
+    ConferenceBoxTicket()
 }

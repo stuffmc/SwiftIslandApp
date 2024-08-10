@@ -17,7 +17,7 @@ struct TicketAddButton: View {
     @State var presentFailedPasteAlert = false
 
     func addTicketFromPasteBoard(text: String?) {
-        guard let text = text else {
+        guard let text else {
             presentFailedPasteAlert = true
             failedPasteAlert = "Nothing on the clipboard, or no clipboard access"
             return
@@ -37,7 +37,7 @@ struct TicketAddButton: View {
             let _ = path.popLast()
         }
         let slug = path.popLast()
-        guard let slug = slug, path.last == "tickets" else {
+        guard let slug, path.last == "tickets" else {
             presentFailedPasteAlert = true
             failedPasteAlert = "Please copy a ti.to/tickets URL\n\n\(url.absoluteString)"
             return
