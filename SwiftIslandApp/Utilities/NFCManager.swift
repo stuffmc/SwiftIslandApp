@@ -3,7 +3,7 @@
 // Copyright © 2023 AppTrix AB. All rights reserved.
 //
 
-#if !os(visionOS)
+#if canImport(CoreNFC)
 import Foundation
 import CoreNFC
 

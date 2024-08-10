@@ -23,10 +23,10 @@ struct SectionAtTheConferenceNotActivated: View {
     @Default(.userIsActivated)
     private var userIsActivated
 
-#if os(visionOS)
-    private let hasNFC = false
-#else
+#if canImport(CoreNFC)
     private let hasNFC = NFCManager.deviceHasNFCSupport()
+#else
+    private let hasNFC = false
 #endif
     @StateObject private var locationManager = LocationManager()
 
