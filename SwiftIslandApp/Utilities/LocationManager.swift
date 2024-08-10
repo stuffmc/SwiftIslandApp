@@ -53,6 +53,9 @@ final class LocationManager: NSObject, ObservableObject {
     /// - Note: The boundaries defined in this function are approximations and may not exactly match the geographical boundaries of the islands.
     /// - Warning: For more precise results, consider using a more detailed geographical model or library that can handle complex polygon shapes.
     func isCoordinateInTexel(_ coordinate: CLLocationCoordinate2D) -> Bool {
+#if DEBUG
+        return true
+#else
         let texelMin = CLLocationCoordinate2D(latitude: 52.9797199311885, longitude: 4.650365369448815)
         let texelMax = CLLocationCoordinate2D(latitude: 53.19324793605265, longitude: 4.966470908970561)
 
@@ -70,6 +73,7 @@ final class LocationManager: NSObject, ObservableObject {
             coordinate.longitude <= ingaroMax.longitude
 
         return isCoordinateInTexel || isCoordinateInIngaro
+#endif
     }
 }
 
