@@ -10,11 +10,7 @@ import Defaults
 #if os(visionOS)
 import SwiftIslandLocalDataLogic
 #else
-#if os(visionOS)
-import SwiftIslandLocalDataLogic
-#else
 import SwiftIslandDataLogic
-#endif
 #endif
 import WeatherKit
 import CoreLocation
