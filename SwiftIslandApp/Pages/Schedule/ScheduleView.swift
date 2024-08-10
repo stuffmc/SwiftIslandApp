@@ -82,6 +82,7 @@ struct ScheduleView: View {
                         showPopover = true
                     } label: {
                         Text(selectedDate ?? Date(), formatter: dateFormatter)
+#if os(iOS)
                             .foregroundColor(.questionMarkColor)
                             .padding(.vertical, 6)
                             .padding(.horizontal, 12)
@@ -89,6 +90,7 @@ struct ScheduleView: View {
                                 RoundedRectangle(cornerRadius: 5, style: .continuous)
                                     .fill(Color(UIColor.tertiarySystemGroupedBackground))
                             )
+#endif
                             .popover(
                                 isPresented: $showPopover,
                                 attachmentAnchor: .point(.bottom),
