@@ -71,6 +71,12 @@ struct MainApp: App {
                 Text("\(showTicketMessage)\n\nYou can find your ticket under Practical → Before you leave → Tickets")
             })
         }
+        
+        WindowGroup(id: "Globe") {
+            Globe()
+                .environment(ViewModel())
+        }
+        .windowStyle(.volumetric)
     }
 }
 

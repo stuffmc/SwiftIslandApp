@@ -11,6 +11,7 @@ import SwiftIslandDataLogic
 #endif
 
 struct ConferenceBoxMentors: View {
+    @Environment(\.openWindow) private var openWindow
     var namespace: Namespace.ID
 
     let geo: GeometryProxy
@@ -23,12 +24,24 @@ struct ConferenceBoxMentors: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Mentors this year".uppercased())
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .padding(.horizontal, 40)
-                .padding(.top, 6)
-                .padding(.bottom, 0)
+            HStack {
+                Text("Mentors this year".uppercased())
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal, 40)
+                    .padding(.top, 6)
+                    .padding(.bottom, 0)
+#if os(visionOS)
+                Image(systemName: "globe")
+                    .font(.largeTitle)
+                    .hoverEffect { effect, isActive, _ in
+                        effect.scaleEffect(isActive ? 1.2 : 1)
+                    }
+                    .onTapGesture {
+                        openWindow(id: "Globe")
+                    }
+#endif
+            }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack {
                     ForEach(appDataModel.mentors) { mentor in
