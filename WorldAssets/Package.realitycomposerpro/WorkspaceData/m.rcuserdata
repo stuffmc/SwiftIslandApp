@@ -1,0 +1,40 @@
+{
+  "advancedEditorSelectedIdentifier" : "ProjectBrowser",
+  "openSceneRelativePaths" : [
+    "Earth.usda",
+    "Globe.usda"
+  ],
+  "recentIdentifiers" : {
+
+  },
+  "sceneCameraHistory" : {
+    "6AF421D5-F098-4D35-8830-F4BB228EF79A" : [
+      {
+        "date" : 745026943.397349,
+        "title" : "Untitled",
+        "transform" : [
+          0.9900203,
+          -1.05930376e-10,
+          0.14092481,
+          0,
+          0.08892813,
+          0.7757565,
+          -0.62473494,
+          0,
+          -0.109323345,
+          0.63103247,
+          0.76801467,
+          0,
+          -0.28274295,
+          1.6320393,
+          1.9863161,
+          1
+        ]
+      }
+    ]
+  },
+  "sceneViewportBackgroundColors" : {
+
+  },
+  "selectedSceneRelativePath" : "Earth.usda"
+}

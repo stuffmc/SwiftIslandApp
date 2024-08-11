@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C14C43D2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */; };
 		0C14C43E2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */; };
 		0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */; };
+		0C6690712C68315C00AFB9FE /* WorldAssets in Resources */ = {isa = PBXBuildFile; fileRef = 0C6690702C68315C00AFB9FE /* WorldAssets */; };
+		0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6690792C6831DC00AFB9FE /* WorldAssets */; };
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
@@ -148,6 +150,7 @@
 
 /* Begin PBXFileReference section */
 		0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBackgroundEffect.swift; sourceTree = "<group>"; };
+		0C6690702C68315C00AFB9FE /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
 		0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandLocalDataLogic; sourceTree = "<group>"; };
 		0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandDataLogic; sourceTree = "<group>"; };
 		2A090BD62A71B0E9003553D2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -261,6 +264,10 @@
 		B3F7EEF32A86D6BB001D69B6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0C6690752C6831B000AFB9FE /* 3D */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = 3D; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		2A987AC22A7AE4AF00EE15DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -276,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */,
 				2A7F128B2A69CB2C007C28EA /* Defaults in Frameworks */,
 				0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */,
 				2A3AB6592A7871030089CF7E /* SwiftIslandDataLogic in Frameworks */,
@@ -374,6 +382,7 @@
 		2A3AB6552A7870C80089CF7E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				0C6690702C68315C00AFB9FE /* WorldAssets */,
 				0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */,
 				0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */,
 			);
@@ -592,6 +601,7 @@
 				2A659B242BFFE2B100A57501 /* Shared */,
 				2AECBFB12A95D769001FBFA9 /* ci_scripts */,
 				2A3AB6552A7870C80089CF7E /* Packages */,
+				0C6690752C6831B000AFB9FE /* 3D */,
 				2AEDC4952A4A030F00CD0180 /* SwiftIslandApp */,
 				2AEDC4A62A4A031100CD0180 /* SwiftIslandAppTests */,
 				2A987ACA2A7AE4AF00EE15DF /* SwiftIslandWidgets */,
@@ -755,6 +765,9 @@
 				2AFA65EA2A9E9395004A13F8 /* PBXTargetDependency */,
 				2A987AD82A7AE4B000EE15DF /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				0C6690752C6831B000AFB9FE /* 3D */,
+			);
 			name = SwiftIslandApp;
 			packageProductDependencies = (
 				2A7F128A2A69CB2C007C28EA /* Defaults */,
@@ -762,6 +775,7 @@
 				2A77AD8D2C0527AE00610250 /* AckGen */,
 				2A77AD8F2C0527AE00610250 /* AckGenUI */,
 				0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */,
+				0C6690792C6831DC00AFB9FE /* WorldAssets */,
 			);
 			productName = SwiftIsland;
 			productReference = 2AEDC4932A4A030F00CD0180 /* Swift Island.app */;
@@ -857,6 +871,7 @@
 				B332ADFB2A9A813C00557AA7 /* marquee.pdf in Resources */,
 				2AFC45FC2BFFEF8200B135F5 /* Acknowledgements.plist in Resources */,
 				2A16EB642A4F6CC200CC881D /* GoogleService-Info.plist in Resources */,
+				0C6690712C68315C00AFB9FE /* WorldAssets in Resources */,
 				2AEDC49B2A4A031000CD0180 /* Assets.xcassets in Resources */,
 				B340138F2A9EA479008A9C21 /* rebus.pdf in Resources */,
 				B332ADFA2A9A813C00557AA7 /* game-of-life.pdf in Resources */,
@@ -1402,6 +1417,10 @@
 		0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftIslandLocalDataLogic;
+		};
+		0C6690792C6831DC00AFB9FE /* WorldAssets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WorldAssets;
 		};
 		2A3AB6582A7871030089CF7E /* SwiftIslandDataLogic */ = {
 			isa = XCSwiftPackageProductDependency;
