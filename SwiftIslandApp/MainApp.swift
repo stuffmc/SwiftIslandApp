@@ -71,12 +71,13 @@ struct MainApp: App {
                 Text("\(showTicketMessage)\n\nYou can find your ticket under Practical → Before you leave → Tickets")
             })
         }
-        
+        #if os(visionOS)
         WindowGroup(id: "Globe") {
             Globe()
                 .environment(ViewModel())
         }
         .windowStyle(.volumetric)
+        #endif
     }
 }
 

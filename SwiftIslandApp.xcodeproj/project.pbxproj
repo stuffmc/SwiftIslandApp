@@ -11,7 +11,7 @@
 		0C14C43E2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */; };
 		0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */; };
 		0C6690712C68315C00AFB9FE /* WorldAssets in Resources */ = {isa = PBXBuildFile; fileRef = 0C6690702C68315C00AFB9FE /* WorldAssets */; };
-		0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6690792C6831DC00AFB9FE /* WorldAssets */; };
+		0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C6690792C6831DC00AFB9FE /* WorldAssets */; };
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
@@ -264,8 +264,41 @@
 		B3F7EEF32A86D6BB001D69B6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0CFE40C02C6BD4DB009932F7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				DragRotationModifier.swift = (
+					xros,
+				);
+				Earth.swift = (
+					xros,
+				);
+				"EarthEntity+Configuration.swift" = (
+					xros,
+				);
+				EarthEntity.swift = (
+					xros,
+				);
+				"Entity+Sunlight.swift" = (
+					xros,
+				);
+				Globe.swift = (
+					xros,
+				);
+				GlobeControls.swift = (
+					xros,
+				);
+				RotationSystem.swift = (
+					xros,
+				);
+			};
+			target = 2AEDC4922A4A030F00CD0180 /* SwiftIslandApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0C6690752C6831B000AFB9FE /* 3D */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = 3D; sourceTree = "<group>"; };
+		0C6690752C6831B000AFB9FE /* 3D */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0CFE40C02C6BD4DB009932F7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = 3D; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */

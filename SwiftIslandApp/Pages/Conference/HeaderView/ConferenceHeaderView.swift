@@ -15,8 +15,9 @@ struct ConferenceHeaderView: View {
     var body: some View {
         VStack(spacing: 13) {
             if !userIsActivated {
-                // TODO: Ask for a 3D Logo for visionOS (also used for App Icon)
+                #if !os(visionOS)
                 Image("Logo")
+                #endif
                 VStack(spacing: 0) {
                     Text("Swift")
                         .font(.custom("WorkSans-Bold", size: 64))
@@ -53,6 +54,10 @@ struct ConferenceHeaderView: View {
                 Spacer()
             }
             .padding(.top, userIsActivated ? 30 : 0)
+        }
+        .ornament(attachmentAnchor: .scene(.top)) {
+            SwiftIslandLogo(isAnimating: false, depth: 10)
+                .frame(height: 80)
         }
     }
 }

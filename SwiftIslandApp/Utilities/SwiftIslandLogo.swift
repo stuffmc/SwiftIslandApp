@@ -23,9 +23,14 @@ struct SwiftIslandLogo: View {
     @State private var rotationBottomLeft = 0.0
     @State private var rotationBottomRight = 0.0
     @State private var animateIn = false
+#if os(visionOS)
+    @State private var anchor: UnitPoint3D = .bottom
+#else
     @State private var anchor: UnitPoint = .bottom
+#endif
 
-
+    var depth = 100.0
+    
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -34,25 +39,26 @@ struct SwiftIslandLogo: View {
                     .aspectRatio(CGSize(width: 2, height: 1), contentMode: .fit)
                     .rotationEffect(Angle(degrees: 180))
                     .padding(0)
-                    .rotation3DEffect(
-                        Angle(degrees: rotationTopRight),
-                        axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
-                    )
+                #if os(visionOS)
+                    .rotation3DEffect(Rotation3D(angle: .init(degrees: rotationTopRight),axis: .x), anchor: anchor)
+                #else
+                    .rotation3DEffect(Angle(degrees: rotationTopRight), axis: (x: 1.0, y: 0, z: 0), anchor: anchor)
+                #endif
                     .percentageOffset(x: 0.75)
                     .onReceive(Timer.publish(every: animationDuration, on: .main, in: .common).autoconnect()) { _ in
                         animateRotation(rotation: $rotationTopRight, order: 0, reverse: true)
                     }
                 Triangle()
                     .fill(shapeColorsTopLeft)
+                #if os(visionOS)
+                    .frame(depth: depth)
+                #endif
                     .aspectRatio(CGSize(width: 2, height: 1), contentMode: .fit)
                     .padding(0)
                     .rotation3DEffect(
                         Angle(degrees: rotationTopLeft),
                         axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
+                        anchor: anchor
                     )
                     .percentageOffset(x: -0.75)
                     .onReceive(Timer.publish(every: animationDuration, on: .main, in: .common).autoconnect()) { _ in
@@ -68,8 +74,7 @@ struct SwiftIslandLogo: View {
                     .rotation3DEffect(
                         Angle(degrees: rotationMiddleLeft),
                         axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
+                        anchor: anchor
                     )
 
                     .percentageOffset(x: 0.25)
@@ -78,13 +83,15 @@ struct SwiftIslandLogo: View {
                     }
                 Triangle()
                     .fill(shapeColorsMiddleRight)
+                #if os(visionOS)
+                    .frame(depth: depth)
+                #endif
                     .aspectRatio(CGSize(width: 2, height: 1), contentMode: .fit)
                     .padding(0)
                     .rotation3DEffect(
                         Angle(degrees: rotationMidldleRight),
                         axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
+                        anchor: anchor
                     )
                     .percentageOffset(x: -0.25)
                     .onReceive(Timer.publish(every: animationDuration, on: .main, in: .common).autoconnect()) { _ in
@@ -100,8 +107,7 @@ struct SwiftIslandLogo: View {
                     .rotation3DEffect(
                         Angle(degrees: rotationBottomRight),
                         axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
+                        anchor: anchor
                     )
                     .percentageOffset(x: 0.75)
                     .onReceive(Timer.publish(every: animationDuration, on: .main, in: .common).autoconnect()) { _ in
@@ -109,15 +115,16 @@ struct SwiftIslandLogo: View {
                     }
                 Triangle()
                     .fill(shapeColorsBottomLeft)
+                #if os(visionOS)
+                    .frame(depth: depth)
+                #endif
                     .aspectRatio(CGSize(width: 2, height: 1), contentMode: .fit)
                     .padding(0)
                     .rotation3DEffect(
                         Angle(degrees: rotationBottomLeft),
                         axis: (x: 1.0, y: 0, z: 0),
-                        anchor: anchor,
-                        perspective: 0
+                        anchor: anchor
                     )
-
                     .percentageOffset(x: -0.75)
                     .onReceive(Timer.publish(every: animationDuration, on: .main, in: .common).autoconnect()) { _ in
                         animateRotation(rotation: $rotationBottomLeft, order: 5)
