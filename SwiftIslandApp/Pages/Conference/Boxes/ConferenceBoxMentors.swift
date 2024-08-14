@@ -49,6 +49,9 @@ struct ConferenceBoxMentors: View {
                             }
                             .padding(.horizontal, 20)
                             .onTapGesture {
+#if os(visionOS)
+                                        openWindow(id: "Mentor", value: mentor)
+#else
                                 if mayShowMentorNextMentor {
                                     mayShowMentorNextMentor = false
                                     selectedMentor = mentor
@@ -58,6 +61,7 @@ struct ConferenceBoxMentors: View {
                                 } else {
                                     debugPrint("Too soon to show next mentor animation")
                                 }
+#endif
                             }
                             .frame(width: geo.size.width * 0.8)
                             .frame(minHeight: geo.size.width * 0.80)

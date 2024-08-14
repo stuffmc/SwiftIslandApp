@@ -78,6 +78,10 @@ struct MainApp: App {
                 .environment(ViewModel())
         }
         .windowStyle(.volumetric)
+        
+        WindowGroup(id: "Mentor", for: SwiftIslandLocalDataLogic.Mentor.self) { mentor in
+            MentorView(namespace: namespace, mentor: mentor.wrappedValue!, isShowContent: .constant(true))
+        }
         #endif
     }
 }

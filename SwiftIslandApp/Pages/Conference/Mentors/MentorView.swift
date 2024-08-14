@@ -60,7 +60,8 @@ struct MentorView: View {
                 }
                 .scrollDisabled(!isShowContent)
 
-                // Close button
+#if os(visionOS)
+                // Close button when not on visionOS
                 if isShowContent {
                     HStack {
                         Spacer()
@@ -77,6 +78,7 @@ struct MentorView: View {
                     .padding(.top, 50)
                     .padding(.trailing)
                 }
+#endif
             }
         }
     }
