@@ -14,6 +14,7 @@
 		0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C6690792C6831DC00AFB9FE /* WorldAssets */; };
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
+		0CFE40C22C6BE28B009932F7 /* ScaleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */; };
 		0CFE40EF2C6CB700009932F7 /* LogoOrnament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */; };
 		0CFE40F02C6CB700009932F7 /* LogoOrnament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */; };
 		0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
@@ -154,6 +155,7 @@
 		0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBackgroundEffect.swift; sourceTree = "<group>"; };
 		0C6690702C68315C00AFB9FE /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
 		0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandLocalDataLogic; sourceTree = "<group>"; };
+		0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffect.swift; sourceTree = "<group>"; };
 		0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoOrnament.swift; sourceTree = "<group>"; };
 		0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandDataLogic; sourceTree = "<group>"; };
 		2A090BD62A71B0E9003553D2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			children = (
 				0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */,
 				0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */,
+				0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */,
 				2A16EB402A4CDD4A00CC881D /* Color+Helper.swift */,
 				2AE440002A702BC0009078E3 /* Date+Formatting.swift */,
 				2A7F12802A64891F007C28EA /* LinearGradient.swift */,
@@ -994,6 +997,7 @@
 				2A7F12792A640730007C28EA /* ScrollViewOffset.swift in Sources */,
 				2A16EB362A4CDA4200CC881D /* ConferenceHeaderView.swift in Sources */,
 				B3C626442A94956A002754A8 /* TicketEditView.swift in Sources */,
+				0CFE40C22C6BE28B009932F7 /* ScaleEffect.swift in Sources */,
 				0C14C43D2C67757A00DCA4B5 /* GlassBackgroundEffect.swift in Sources */,
 				B3F443032A9765E700AFDF43 /* TicketAddButton.swift in Sources */,
 				2A37FB9A2A7D3F890062E63A /* Bundle+Version.swift in Sources */,

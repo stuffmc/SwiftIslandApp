@@ -27,22 +27,21 @@ struct ConferenceBoxSponsors: View {
                     .padding(.bottom, 0)
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(sponsors.apps) { sponsor in
-                        Button {
-                            currentSponsor = sponsor
-                        } label: {
-                            VStack {
-                                AsyncImage(url: sponsor.image) { image in
-                                    image.resizable().aspectRatio(1, contentMode: .fit)
-                                } placeholder: {
-                                    Rectangle()
-                                        .fill(.ultraThinMaterial)
-                                        .cornerRadius(10)
-                                }
-                                .frame(width: 70, height: 70)
-                                Text(sponsor.title).font(.callout).foregroundColor(.primary)
+                        VStack {
+                            AsyncImage(url: sponsor.image) { image in
+                                image.resizable().aspectRatio(1, contentMode: .fit)
+                            } placeholder: {
+                                Rectangle()
+                                    .fill(.ultraThinMaterial)
+                                    .cornerRadius(10)
                             }
+                            .frame(width: 70, height: 70)
+                            .scaleHover()
+                            Text(sponsor.title).font(.callout).foregroundColor(.primary)
                         }
-                        .buttonStyle(.plain)
+                        .onTapGesture {
+                            currentSponsor = sponsor
+                        }
                     }
                 }
                 if let content = sponsors.content {

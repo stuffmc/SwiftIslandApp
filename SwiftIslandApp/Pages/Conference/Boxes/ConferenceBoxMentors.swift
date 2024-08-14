@@ -34,10 +34,7 @@ struct ConferenceBoxMentors: View {
 #if os(visionOS)
                 Image(systemName: "globe")
                     .font(.largeTitle)
-                    .hoverEffect { effect, isActive, _ in
-                        effect.scaleEffect(isActive ? 1.2 : 1)
-                    }
-                    .onTapGesture {
+                    .scaleHover {
                         openWindow(id: "Globe")
                     }
 #endif
