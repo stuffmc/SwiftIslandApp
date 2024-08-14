@@ -45,6 +45,7 @@ struct Globe: View {
             }
 
             GlobeControls()
+                .logoOrnament()
                 .offset(y: -70)
         }
         .onChange(of: model.isGlobeRotating) { _, isRotating in

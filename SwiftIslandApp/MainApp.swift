@@ -70,6 +70,7 @@ struct MainApp: App {
             }, message: {
                 Text("\(showTicketMessage)\n\nYou can find your ticket under Practical → Before you leave → Tickets")
             })
+            .logoOrnament()
         }
         #if os(visionOS)
         WindowGroup(id: "Globe") {

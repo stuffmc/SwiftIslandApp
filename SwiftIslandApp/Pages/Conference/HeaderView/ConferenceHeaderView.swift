@@ -55,10 +55,6 @@ struct ConferenceHeaderView: View {
             }
             .padding(.top, userIsActivated ? 30 : 0)
         }
-        .ornament(attachmentAnchor: .scene(.top)) {
-            SwiftIslandLogo(isAnimating: false, depth: 10)
-                .frame(height: 80)
-        }
     }
 }
 
