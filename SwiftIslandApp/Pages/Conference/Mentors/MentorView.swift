@@ -90,6 +90,34 @@ struct MentorView: View {
     }
 }
 
+struct MentorImageView: View {
+    let mentor: Mentor
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 50)
+            .frame(width: 500)
+            .foregroundColor(.orange)
+            .overlay {
+                Image(mentor.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(40)
+                    .padding([.top, .horizontal])
+            }
+    }
+}
+
+#Preview {
+    ScrollView(.horizontal) {
+        HStack {
+            ForEach(Mentor.forWorkshop) {
+                MentorImageView(mentor: $0)
+                    .frame(width: 600)
+            }
+        }
+    }
+}
+
 extension URL: Identifiable {
     public var id: String {
         absoluteString

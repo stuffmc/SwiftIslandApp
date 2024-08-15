@@ -20,14 +20,16 @@ struct MainApp: App {
         SwiftIslandDataLogic.configure()
     }
 
+    @Namespace private var namespace
+
     @StateObject private var appDataModel = AppDataModel()
     @State private var appActionTriggered: AppActions?
     @State private var showTicketAlert = false
     @State private var showTicketMessage: String = ""
     @State private var currentPuzzleSlug: String?
-
-    var body: some Scene {
-        WindowGroup {
+    
+    var body: some SwiftUI.Scene {
+        WindowGroup(id: "App") {
             ZStack {
                 if case .loaded = appDataModel.appState {
                     TabBarView(appActionTriggered: $appActionTriggered)
@@ -81,6 +83,11 @@ struct MainApp: App {
         
         WindowGroup(id: "Mentor", for: SwiftIslandLocalDataLogic.Mentor.self) { mentor in
             MentorView(namespace: namespace, mentor: mentor.wrappedValue!, isShowContent: .constant(true))
+        }
+        
+        ImmersiveSpace(id: "Mentors") {
+            // Put all mentors on the wall
+            MentorsWallView()
         }
         #endif
     }

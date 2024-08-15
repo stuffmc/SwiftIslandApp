@@ -12,6 +12,7 @@ import SwiftIslandDataLogic
 
 struct ConferenceBoxMentors: View {
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
     var namespace: Namespace.ID
 
     let geo: GeometryProxy
@@ -36,6 +37,14 @@ struct ConferenceBoxMentors: View {
                     .font(.largeTitle)
                     .scaleHover {
                         openWindow(id: "Globe")
+                    }
+                
+                Image(systemName: "person.crop.circle")
+                    .font(.largeTitle)
+                    .scaleHover {
+                        Task {
+                            await openImmersiveSpace(id: "Mentors")
+                        }
                     }
 #endif
             }

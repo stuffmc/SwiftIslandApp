@@ -12,6 +12,7 @@
 		0C5406912C66660D009AC18A /* SwiftIslandLocalDataLogic in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C5406902C66660D009AC18A /* SwiftIslandLocalDataLogic */; };
 		0C6690712C68315C00AFB9FE /* WorldAssets in Resources */ = {isa = PBXBuildFile; fileRef = 0C6690702C68315C00AFB9FE /* WorldAssets */; };
 		0C66907A2C6831DC00AFB9FE /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; platformFilters = (xros, ); productRef = 0C6690792C6831DC00AFB9FE /* WorldAssets */; };
+		0CA4D97C2C6E675D00B2368A /* MentorsWallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4D97B2C6E675D00B2368A /* MentorsWallView.swift */; };
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CFE40C22C6BE28B009932F7 /* ScaleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */; };
@@ -154,6 +155,7 @@
 /* Begin PBXFileReference section */
 		0C14C43C2C67757A00DCA4B5 /* GlassBackgroundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBackgroundEffect.swift; sourceTree = "<group>"; };
 		0C6690702C68315C00AFB9FE /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
+		0CA4D97B2C6E675D00B2368A /* MentorsWallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsWallView.swift; sourceTree = "<group>"; };
 		0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftIslandLocalDataLogic; sourceTree = "<group>"; };
 		0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffect.swift; sourceTree = "<group>"; };
 		0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoOrnament.swift; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 			isa = PBXGroup;
 			children = (
 				2A17F0C12A6075BF0055E214 /* MentorView.swift */,
+				0CA4D97B2C6E675D00B2368A /* MentorsWallView.swift */,
 			);
 			path = Mentors;
 			sourceTree = "<group>";
@@ -993,6 +996,7 @@
 				B3733D772A9951B10069D490 /* PuzzleView.swift in Sources */,
 				2A7F12982A6B19E0007C28EA /* SwiftIslandLogo.swift in Sources */,
 				2AEDC4C32A4A089100CD0180 /* ConferencePageView.swift in Sources */,
+				0CA4D97C2C6E675D00B2368A /* MentorsWallView.swift in Sources */,
 				B3733D792A9951B10069D490 /* PuzzleItemView.swift in Sources */,
 				2A7F12792A640730007C28EA /* ScrollViewOffset.swift in Sources */,
 				2A16EB362A4CDA4200CC881D /* ConferenceHeaderView.swift in Sources */,
