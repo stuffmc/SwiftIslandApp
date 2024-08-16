@@ -81,8 +81,15 @@ struct MainApp: App {
         }
         .windowStyle(.volumetric)
         
-        WindowGroup(id: "Mentor", for: SwiftIslandLocalDataLogic.Mentor.self) { mentor in
-            MentorView(namespace: namespace, mentor: mentor.wrappedValue!, isShowContent: .constant(true))
+        WindowGroup(
+            id: "Mentor",
+            for: SwiftIslandLocalDataLogic.Mentor.self
+        ) { mentor in
+            MentorView(
+                namespace: namespace,
+                mentor: mentor.wrappedValue!,
+                isShowContent: .constant(true)
+            )
         }
         
         ImmersiveSpace(id: "Mentors") {

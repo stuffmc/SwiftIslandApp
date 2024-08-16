@@ -34,6 +34,10 @@ public struct Mentor: Response, Hashable {
         guard let mastodon else { return nil }
         return URL(string: mastodon)
     }
+    
+    public var firstName: String {
+        name.split(separator: " ").first?.lowercased() ?? " "
+    }
 }
 
 extension Mentor: Identifiable {

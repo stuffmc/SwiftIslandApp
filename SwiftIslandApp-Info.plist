@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSWorldSensingUsageDescription</key>
+	<string>We need this for finding pictures of the mentors in the Room</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>UIAppFonts</key>
@@ -11,9 +13,9 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We only use your location to verify that you are at the conference. Once we know, we don&apos;t use it anymore.</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>slack</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>slack</string>
+	</array>
 </dict>
 </plist>

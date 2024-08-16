@@ -10,9 +10,13 @@ import SwiftIslandLocalDataLogic
 import SwiftIslandDataLogic
 #endif
 
+import ARKit
+
 struct ConferenceBoxMentors: View {
     @Environment(\.openWindow) private var openWindow
+#if os(visionOS)
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
+#endif
     var namespace: Namespace.ID
 
     let geo: GeometryProxy

@@ -107,6 +107,7 @@ struct MentorImageView: View {
     }
 }
 
+#if os(visionOS)
 #Preview {
     ScrollView(.horizontal) {
         HStack {
@@ -117,6 +118,7 @@ struct MentorImageView: View {
         }
     }
 }
+#endif
 
 extension URL: Identifiable {
     public var id: String {
