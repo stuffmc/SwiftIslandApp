@@ -3,10 +3,12 @@ import SwiftUI
 struct LogoOrnamentModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
+#if os(visionOS)
             .ornament(attachmentAnchor: .scene(.top)) {
                 SwiftIslandLogo(isAnimating: false, depth: 10)
                     .frame(height: 80)
             }
+#endif
     }
 }
 
@@ -18,7 +20,7 @@ extension View {
 
 #Preview {
     Text("Main View")
-        .font(.extraLargeTitle)
+        .font(.largeTitle)
         .paddedGlassBackgroundEffect()
         .logoOrnament()
 }
