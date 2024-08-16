@@ -16,7 +16,6 @@
 		0CC6F6CA2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CC6F6CB2C6659FE008F6824 /* SwiftIslandLocalDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CC6F6C92C6659FE008F6824 /* SwiftIslandLocalDataLogic */; };
 		0CFE40C22C6BE28B009932F7 /* ScaleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40C12C6BE28B009932F7 /* ScaleEffect.swift */; };
-		0CFE40EF2C6CB700009932F7 /* LogoOrnament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */; };
 		0CFE40F02C6CB700009932F7 /* LogoOrnament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE40EE2C6CB700009932F7 /* LogoOrnament.swift */; };
 		0CFF765D2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
 		0CFF765E2C6661A100CC648D /* SwiftIslandDataLogic in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF765C2C6661A100CC648D /* SwiftIslandDataLogic */; };
@@ -972,7 +971,6 @@
 			files = (
 				2A987AF82A7AEBA300EE15DF /* Date+Formatting.swift in Sources */,
 				2E19CADE2A7EEC9700177B61 /* UpNextSystemLargeView.swift in Sources */,
-				0CFE40EF2C6CB700009932F7 /* LogoOrnament.swift in Sources */,
 				2A987AF72A7AEB9700EE15DF /* Color+Helper.swift in Sources */,
 				2A987AF02A7AEA1F00EE15DF /* UpNextProvider.swift in Sources */,
 				2A987AF92A7AEC4300EE15DF /* LinearGradient.swift in Sources */,
