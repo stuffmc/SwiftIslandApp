@@ -2,7 +2,9 @@
   "advancedEditorSelectedIdentifier" : "ProjectBrowser",
   "openSceneRelativePaths" : [
     "Earth.usda",
-    "Globe.usda"
+    "Globe.usda",
+    "earth_004_clouds_resized.usdc",
+    "earth_sphere_equirectangular.usdc"
   ],
   "recentIdentifiers" : {
 
@@ -36,5 +38,5 @@
   "sceneViewportBackgroundColors" : {
 
   },
-  "selectedSceneRelativePath" : "Earth.usda"
+  "selectedSceneRelativePath" : "Globe.usda"
 }

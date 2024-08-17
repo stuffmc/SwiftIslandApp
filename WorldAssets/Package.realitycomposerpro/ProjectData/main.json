@@ -11,6 +11,8 @@
     "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/Sun.usda" : "088D34D4-28D8-43DF-9224-25316CEC5ECC",
     "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/Sun\/Sun.exported_compressed.usdc" : "5DF31FBF-B20E-462E-A857-0A0C07099242",
     "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/Telescope.usda" : "E8B8CE96-14C0-4650-BB3C-3C429BB5843A",
-    "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/Telescope\/Telescope.exported_compressed.usdc" : "2C867DD3-0451-47C4-B9B1-360F14B42510"
+    "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/Telescope\/Telescope.exported_compressed.usdc" : "2C867DD3-0451-47C4-B9B1-360F14B42510",
+    "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/earth_004_clouds_resized.usdc" : "5BE487F7-55C9-4445-88BE-39D2BB5166E7",
+    "WorldAssets\/Sources\/WorldAssets\/WorldAssets.rkassets\/earth_sphere_equirectangular.usdc" : "24B476BC-432E-42A0-834E-9B044BFF2612"
   }
 }

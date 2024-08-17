@@ -4,7 +4,6 @@
 	classes = {
 	};
 	objectVersion = 70;
-	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */

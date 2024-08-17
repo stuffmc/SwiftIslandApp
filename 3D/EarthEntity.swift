@@ -23,10 +23,7 @@ class EarthEntity: Entity {
     /// An entity that provides a configurable rotation,
     /// separate from the day/night cycle.
     private let rotator = Entity()
-
-    /// A container for artificial satellites.
-    private let satellites = Entity()
-
+    
     // MARK: - Internal state
 
     /// Keep track of solar intensity and only update when it changes.
@@ -54,7 +51,8 @@ class EarthEntity: Entity {
         super.init()
 
         // Load the earth and pole models.
-        guard let earth = await WorldAssets.entity(named: configuration.isCloudy ? "Earth" : "Globe") else { return }
+        let name = configuration.isCloudy ? "Earth" : "Globe"
+        guard let earth = await WorldAssets.entity(named: name) else { return }
         self.earth = earth
 
         // Attach to the Earth to a set of entities that enable axial
@@ -68,7 +66,7 @@ class EarthEntity: Entity {
             configuration: configuration,
             animateUpdates: false)
     }
-
+    
     // MARK: - Updates
 
     /// Updates all the entity's configurable elements.

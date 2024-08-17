@@ -1,3 +1,44 @@
 {
-
+  "226D5FCD-4FF0-430F-A93F-70BF40142986" : {
+    "objectMetadataList" : [
+      [
+        "226D5FCD-4FF0-430F-A93F-70BF40142986",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "226D5FCD-4FF0-430F-A93F-70BF40142986",
+        "Root",
+        "Globe"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "6AF421D5-F098-4D35-8830-F4BB228EF79A" : {
+    "objectMetadataList" : [
+      [
+        "6AF421D5-F098-4D35-8830-F4BB228EF79A",
+        "Root",
+        "Earth"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6AF421D5-F098-4D35-8830-F4BB228EF79A",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
 }
