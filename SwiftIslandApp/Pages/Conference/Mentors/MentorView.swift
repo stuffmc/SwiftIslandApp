@@ -120,26 +120,26 @@ struct MentorImageView: View {
 }
 #endif
 
-extension URL: Identifiable {
+extension URL: @retroactive Identifiable {
     public var id: String {
         absoluteString
     }
 }
 
 #Preview("No content") {
-    @Namespace var namespace
+    @Previewable @Namespace var namespace
     let mentor = Mentor.forPreview()
 
-    return MentorView(namespace: namespace, mentor: mentor, isShowContent: .constant(true))
+    MentorView(namespace: namespace, mentor: mentor, isShowContent: .constant(true))
         .ignoresSafeArea()
         .coordinateSpace(name: "Show content")
 }
 
 #Preview("Show content") {
-    @Namespace var namespace
+    @Previewable @Namespace var namespace
     let mentor = Mentor.forPreview()
 
-    return MentorView(namespace: namespace, mentor: mentor, isShowContent: .constant(true))
+    MentorView(namespace: namespace, mentor: mentor, isShowContent: .constant(true))
         .coordinateSpace(name: "Show content")
         .ignoresSafeArea()
 }

@@ -4,13 +4,11 @@
 //
 
 import SwiftUI
-#if !os(visionOS)
-import Firebase
-#endif
 import Defaults
 #if os(visionOS)
 import SwiftIslandLocalDataLogic
 #else
+import Firebase
 import SwiftIslandDataLogic
 #endif
 

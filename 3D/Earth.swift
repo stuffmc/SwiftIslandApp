@@ -9,6 +9,13 @@ import SwiftUI
 import RealityKit
 import WorldAssets
 
+#if os(visionOS)
+import SwiftIslandLocalDataLogic
+#else
+import Firebase
+import SwiftIslandDataLogic
+#endif
+
 /// The model of the Earth.
 struct Earth: View {
     var earthConfiguration: EarthEntity.Configuration = .init()
@@ -28,12 +35,16 @@ struct Earth: View {
             let earthEntity = await EarthEntity(configuration: earthConfiguration)
             if let entity = earthEntity.findEntity(named: "Globe") {
                 content.add(entity)
-                if let attachment = attachments.entity(for: "country"),
-                   let radius = entity.components[CollisionComponent.self]?.shapes.first?.bounds.boundingRadius
-                {
-                    let coordinate = coordinatesToCartesian(latitude: 50, longitude: 6, radius: radius / 1500)
-                    attachment.position = coordinate
-                    content.add(attachment)
+                
+                for mentor in Mentor.forWorkshop { 
+                    if let attachment = attachments.entity(for: mentor.name),
+                       let radius = entity.components[CollisionComponent.self]?.shapes.first?.bounds.boundingRadius
+                    {
+                        let coordinate = coordinatesToCartesian(latitude: mentor.latitude, longitude: mentor.longitude, radius: radius / 1500)
+                        attachment.position = coordinate
+                        print("\(mentor.name): \(mentor.latitude), \(mentor.longitude)")
+                        content.add(attachment)
+                    }
                 }
             }
         } update: { content, attachments in
@@ -50,9 +61,11 @@ struct Earth: View {
                 print(rotationX, rotationY, rotationZ)
             }
         } attachments: {
-            Attachment(id: "country") {
-                Button("GERMANY") {}
-                    .glassBackgroundEffect()
+            ForEach(Mentor.forWorkshop) { mentor in
+                Attachment(id: mentor.name) {
+                    Button(mentor.name) {}
+                        .glassBackgroundEffect()
+                }
             }
         }
     }
