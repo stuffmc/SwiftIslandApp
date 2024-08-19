@@ -58,8 +58,7 @@ struct PuzzleItemView: View {
                     .degrees(viewModel.flipAngle),
                     axis: (x: 0.0, y: 1.0, z: 0.0),
                     anchor: .center,
-                    anchorZ: 0.0,
-                    perspective: 1.0
+                    anchorZ: 0.0
                 )
                 .offset(x: viewModel.x, y: viewModel.y)
                 .scaleEffect(viewModel.scale)

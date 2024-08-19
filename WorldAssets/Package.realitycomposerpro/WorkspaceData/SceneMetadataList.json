@@ -3,6 +3,25 @@
     "objectMetadataList" : [
       [
         "226D5FCD-4FF0-430F-A93F-70BF40142986",
+        "Root",
+        "Globe"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "226D5FCD-4FF0-430F-A93F-70BF40142986",
+        "Root",
+        "Globe",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "226D5FCD-4FF0-430F-A93F-70BF40142986",
         "Root"
       ],
       {
@@ -12,7 +31,8 @@
       [
         "226D5FCD-4FF0-430F-A93F-70BF40142986",
         "Root",
-        "Globe"
+        "Globe",
+        "earth_geo"
       ],
       {
         "isExpanded" : true,
@@ -24,8 +44,7 @@
     "objectMetadataList" : [
       [
         "6AF421D5-F098-4D35-8830-F4BB228EF79A",
-        "Root",
-        "Earth"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -33,7 +52,8 @@
       },
       [
         "6AF421D5-F098-4D35-8830-F4BB228EF79A",
-        "Root"
+        "Root",
+        "Earth"
       ],
       {
         "isExpanded" : true,

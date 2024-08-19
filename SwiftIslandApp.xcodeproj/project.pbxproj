@@ -277,25 +277,7 @@
 				DragRotationModifier.swift = (
 					xros,
 				);
-				Earth.swift = (
-					xros,
-				);
-				"EarthEntity+Configuration.swift" = (
-					xros,
-				);
-				EarthEntity.swift = (
-					xros,
-				);
-				"Entity+Sunlight.swift" = (
-					xros,
-				);
-				Globe.swift = (
-					xros,
-				);
-				GlobeControls.swift = (
-					xros,
-				);
-				RotationSystem.swift = (
+				GLobe.swift = (
 					xros,
 				);
 			};

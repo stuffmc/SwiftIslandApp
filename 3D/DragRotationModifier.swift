@@ -22,9 +22,7 @@ extension View {
             DragRotationModifier(
                 yawLimit: yawLimit,
                 pitchLimit: pitchLimit,
-                sensitivity: sensitivity,
-                axRotateClockwise: axRotateClockwise,
-                axRotateCounterClockwise: axRotateCounterClockwise
+                sensitivity: sensitivity
             )
         )
     }
@@ -35,8 +33,6 @@ private struct DragRotationModifier: ViewModifier {
     var yawLimit: Angle?
     var pitchLimit: Angle?
     var sensitivity: Double
-    var axRotateClockwise: Bool
-    var axRotateCounterClockwise: Bool
 
     @State private var baseYaw: Double = 0
     @State private var yaw: Double = 0
@@ -89,18 +85,6 @@ private struct DragRotationModifier: ViewModifier {
                     basePitch = pitch
                 }
             )
-            .onChange(of: axRotateClockwise) {
-                withAnimation(.spring) {
-                    yaw -= (.pi / 6)
-                    baseYaw = yaw
-                }
-            }
-            .onChange(of: axRotateCounterClockwise) {
-                withAnimation(.spring) {
-                    yaw += (.pi / 6)
-                    baseYaw = yaw
-                }
-            }
     }
 
     /// Finds the spin for the specified linear displacement, subject to an

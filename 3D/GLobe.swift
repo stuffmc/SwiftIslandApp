@@ -1,9 +1,9 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
+ See the LICENSE.txt file for this sample’s licensing information.
 
-Abstract:
-The model of the Earth.
-*/
+ Abstract:
+ The model of the Earth.
+ */
 
 import SwiftUI
 import RealityKit
@@ -17,30 +17,25 @@ import SwiftIslandDataLogic
 #endif
 
 /// The model of the Earth.
-struct Earth: View {
-    var earthConfiguration: EarthEntity.Configuration = .init()
-    var animateUpdates: Bool = false
-    var axCustomActionHandler: ((_: AccessibilityEvents.CustomAction) -> Void)? = nil
-
+struct Globe: View {
     // Magic Numbers for the Rotation of the Globe to map Coordinates...
-    private let rotationX: Float = 20
-    private let rotationY: Float = 110
-    private let rotationZ: Float = 30
+    private let rotationX: Float = 90
+    private let rotationY: Float = 160
+    private let rotationZ: Float = 0
 
-    /// The Earth entity that the view creates and stores for later updates.
-    @State private var earthEntity: EarthEntity?
+    @State private var entity: Entity?
 
     var body: some View {
         RealityView { content, attachments in
-            let earthEntity = await EarthEntity(configuration: earthConfiguration)
+            guard let earthEntity = await WorldAssets.entity(named: "Globe") else { return }
             if let entity = earthEntity.findEntity(named: "Globe") {
                 content.add(entity)
-                
-                for mentor in Mentor.forWorkshop { 
+
+                for mentor in Mentor.forWorkshop {
                     if let attachment = attachments.entity(for: mentor.name),
                        let radius = entity.components[CollisionComponent.self]?.shapes.first?.bounds.boundingRadius
                     {
-                        let coordinate = coordinatesToCartesian(latitude: mentor.latitude, longitude: mentor.longitude, radius: radius / 1500)
+                        let coordinate = coordsToCartesian(latitude: mentor.latitude, longitude: mentor.longitude, radius: radius / 1500)
                         attachment.position = coordinate
                         print("\(mentor.name): \(mentor.latitude), \(mentor.longitude)")
                         content.add(attachment)
@@ -48,10 +43,6 @@ struct Earth: View {
                 }
             }
         } update: { content, attachments in
-            // Reconfigure everything when any configuration changes.
-            earthEntity?.update(
-                configuration: earthConfiguration,
-                animateUpdates: animateUpdates)
             if let entity = content.entities.first(where: { $0.name == "Globe" }) {
                 // Apply rotation using the Euler angles from sliders
                 entity.transform.rotation =
@@ -63,14 +54,19 @@ struct Earth: View {
         } attachments: {
             ForEach(Mentor.forWorkshop) { mentor in
                 Attachment(id: mentor.name) {
-                    Button(mentor.name) {}
+                    Text(mentor.name)
+                        .padding(.horizontal, 5)
+                        .font(.caption)
                         .glassBackgroundEffect()
                 }
             }
         }
+        .dragRotation(
+            pitchLimit: .degrees(90)
+        )
     }
-    
-    func coordinatesToCartesian(latitude: Float, longitude: Float, radius: Float) -> SIMD3<Float> {
+
+    func coordsToCartesian(latitude: Float, longitude: Float, radius: Float) -> SIMD3<Float> {
         // lat & lon in radians
         let lat = Float(latitude) * .pi / 180
         let lon = Float(longitude) * .pi / 180
@@ -84,5 +80,5 @@ struct Earth: View {
 }
 
 #Preview {
-    Earth(earthConfiguration: EarthEntity.Configuration.orbitEarthDefault)
+    Globe()
 }
