@@ -23,8 +23,6 @@ struct Globe: View {
     private let rotationY: Float = 160
     private let rotationZ: Float = 0
 
-    @State private var entity: Entity?
-
     var body: some View {
         RealityView { content, attachments in
             guard let earthEntity = await WorldAssets.entity(named: "Globe") else { return }
