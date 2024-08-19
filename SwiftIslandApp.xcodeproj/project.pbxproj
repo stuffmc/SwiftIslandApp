@@ -277,7 +277,7 @@
 				DragRotationModifier.swift = (
 					xros,
 				);
-				GLobe.swift = (
+				Globe.swift = (
 					xros,
 				);
 			};
