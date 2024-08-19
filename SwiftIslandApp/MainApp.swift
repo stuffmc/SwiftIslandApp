@@ -26,7 +26,10 @@ struct MainApp: App {
     @State private var showTicketMessage: String = ""
     @State private var currentPuzzleSlug: String?
     
-    var body: some SwiftUI.Scene {
+    @Environment(\.openWindow) private var openWindow
+
+    var body: some Scene {
+//        WindowGroup { EmptyView().persistentSystemOverlays(.hidden).onAppear { openWindow(id: "Globe")}}
         WindowGroup(id: "App") {
             ZStack {
                 if case .loaded = appDataModel.appState {
@@ -47,7 +50,6 @@ struct MainApp: App {
                     handleOpenURL(url)
                 }
             }
-
             .sheet(
                 isPresented: .constant(currentPuzzleSlug != nil),
                 onDismiss: {
@@ -75,7 +77,6 @@ struct MainApp: App {
         #if os(visionOS)
         WindowGroup(id: "Globe") {
             Globe()
-                .environment(ViewModel())
         }
         .windowStyle(.volumetric)
         

@@ -44,6 +44,7 @@ final class AppDataModel: ObservableObject {
     private lazy var weatherService = WeatherService()
 
     init(dataLogic: DataLogic = SwiftIslandDataLogic()) {
+//        Defaults[.puzzleStatus]["ABCDEF"] = .found
         self.dataLogic = dataLogic
         if !isShowingPreview() {
             Task {
