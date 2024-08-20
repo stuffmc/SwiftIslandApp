@@ -33,7 +33,7 @@ struct Globe: View {
                     if let attachment = attachments.entity(for: mentor.name),
                        let radius = entity.components[CollisionComponent.self]?.shapes.first?.bounds.boundingRadius
                     {
-                        let coordinate = coordsToCartesian(latitude: mentor.latitude, longitude: mentor.longitude, radius: radius / 1500)
+                        let coordinate = coordsToCartesian(latitude: mentor.latitude, longitude: mentor.longitude, radius: radius / 1600)
                         attachment.position = coordinate
                         print("\(mentor.name): \(mentor.latitude), \(mentor.longitude)")
                         content.add(attachment)

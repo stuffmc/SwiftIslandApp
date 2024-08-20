@@ -45,7 +45,10 @@ struct MentorsWallView: View {
                 }
                 if let attachment = attachments.entity(for: mentor.firstName) {
                     mentors[mentor.firstName] = AnchorEntity()
-                    mentors[mentor.firstName]?.addChild(attachment)
+                    if let anchor = mentors[mentor.firstName] {
+                        anchor.addChild(attachment)
+                        content.add(anchor)
+                    }
                 }
             }
         } attachments: {
@@ -58,6 +61,7 @@ struct MentorsWallView: View {
                     Text(mentor.name)
                         .font(.extraLargeTitle)
                         .paddedGlassBackgroundEffect()
+                        .rotation3DEffect(.degrees(90), axis: (1, 0, 0))
                 }
             }
             Attachment(id: "HUD") {
@@ -96,8 +100,8 @@ struct MentorsWallView: View {
     }
 
     func updateImage(_ anchor: ImageAnchor) {
-        if let mentorComponemts = anchor.referenceImage.name?.split(separator: "-"), mentorComponemts.count == 2, anchor.isTracked {
-            mentors[mentorComponemts[1].description]?.transform = Transform(matrix: anchor.originFromAnchorTransform)
+        if let mentorComponemts = anchor.referenceImage.name?.split(separator: "-"), mentorComponemts.count > 1, anchor.isTracked, let mentor = mentors[mentorComponemts[1].description] {
+            mentor.transform = Transform(matrix: anchor.originFromAnchorTransform)
         }
     }
 
